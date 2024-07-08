@@ -45,3 +45,12 @@
     {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
   </li>
 </ul>
+
+<div>
+  <form>
+    <input typr="text" name="name" [(ngModel)]="name">
+    <input typr="text" name="age" [(ngModel)]="age">
+  </form>
+  <h2>Name: {{ name }}</h2>
+  <h2>Age: {{ age }}</h2>
+</div>
