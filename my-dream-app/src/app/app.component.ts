@@ -19,6 +19,15 @@ export class AppComponent {
   hobbies : string[] = ["Furbol","Programación","Netflix"];
   showHobbies : boolean = false;
 
+  posts:any[] = [];
+
+  constructor(private dataService: DataService) {
+    this.dataService.getData().subscribe(data => {
+      //console.log(data);
+      this.posts = data;
+    })
+  }
+
   /*
   constructor() {
     console.log("Constructor working...");
@@ -30,12 +39,6 @@ export class AppComponent {
     this.showHobbies = false;
   }
   */
-
-  constructor(private dataService: DataService) {
-    this.dataService.getData().subscribe(data => {
-      console.log(data);
-    })
-  }
 
   toggleHobbies() {
     this.showHobbies = !this.showHobbies;
