@@ -9,7 +9,8 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms'
 
 import { DataService } from './data.service';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { VideoListComponent } from './video-list/video-list.component'
 
 const routes: Route[] = [
   {path: '', component:AppComponent},
@@ -22,7 +23,8 @@ const routes: Route[] = [
     AppComponent,
     HelloWorldComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    VideoListComponent
   ],
   imports: [
     BrowserModule,
