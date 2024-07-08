@@ -7,7 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
-  name = "Eduardo Portugal";
-  email = "eportugalpor@unsa.edu.pe";
-  webpage = "http://www.unsa.edu.pe";
+  name : string;
+  email; // : string;
+  webpage : string;
+  hobbies : string[];
+
+  constructor() {
+    console.log("Constructor working...");
+    this.title = 'my-dream-app';
+    this.name = "Eduardo Portugal";
+    this.email = "eportugalpor@unsa.edu.pe";
+    this.webpage = "http://www.unsa.edu.pe";
+    this.hobbies = ["Furbol","Programación","Netflix"];
+  }
+
+  showhobbies() {
+    return true;
+  }
 }
