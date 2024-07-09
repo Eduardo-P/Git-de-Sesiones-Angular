@@ -1,13 +1,21 @@
-<h1>{{ title }}</h1>
+<div class="alert alert-danger" role="alert">
+  <h1>{{ title }}</h1>
+</div>
 <div *ngFor="let item of videoList; let i = index">
-  Video
+  <div class="alert alert-primary" role="alert">
+    Video
   <a href='{{ item.slug }}'>{{ item.name }}</a>
-  <div [innerHTML]='item.embed'></div>
-  <div style="position:relative;height:0;padding-bottom:35%">
-    <iframe width='840' height='440' [src]='getEmbedURL(i)'
-    frameborder='0' allow="accelerometer; autoplay;
-    clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
+  </div>
+  <div class="alert alert-success" role="alert">
+    <div [innerHTML]='item.embed'></div>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <div style="position:relative;height:0;padding-bottom:35%">
+      <iframe width='840' height='440' [src]='getEmbedURL(i)'
+      frameborder='0' allow="accelerometer; autoplay;
+      clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    </div>
   </div>
   <br><hr>
 </div>
